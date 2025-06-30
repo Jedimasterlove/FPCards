@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(35, 15%, 98%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(35, 10%, 95%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(35, 15%, 98%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(35, 12%, 88%);
+  --input: hsl(35, 12%, 88%);
+  --primary: hsl(25, 68%, 54%);
+  --primary-foreground: hsl(35, 15%, 98%);
+  --secondary: hsl(35, 10%, 95%);
+  --secondary-foreground: hsl(20, 14.3%, 4.1%);
+  --accent: hsl(35, 10%, 95%);
+  --accent-foreground: hsl(20, 14.3%, 4.1%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(35, 15%, 98%);
+  --ring: hsl(25, 68%, 54%);
+  --radius: 0.75rem;
+  
+  /* Finding Peace Custom Colors */
+  --peace-cream: hsl(35, 25%, 97%);
+  --peace-beige: hsl(35, 15%, 93%);
+  --peace-brown: hsl(25, 68%, 31%);
+  --peace-brown-light: hsl(25, 68%, 54%);
+  --peace-orange: hsl(25, 77%, 50%);
+  --peace-orange-light: hsl(16, 100%, 70%);
+  --peace-blue: hsl(207, 44%, 49%);
+  --peace-green: hsl(120, 61%, 34%);
+}
+
+.dark {
+  --background: hsl(20, 14.3%, 4.1%);
+  --foreground: hsl(35, 15%, 98%);
+  --muted: hsl(25, 9.8%, 10%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(20, 14.3%, 4.1%);
+  --popover-foreground: hsl(35, 15%, 98%);
+  --card: hsl(25, 9.8%, 10%);
+  --card-foreground: hsl(35, 15%, 98%);
+  --border: hsl(25, 9.8%, 10%);
+  --input: hsl(25, 9.8%, 10%);
+  --primary: hsl(25, 68%, 54%);
+  --primary-foreground: hsl(35, 15%, 98%);
+  --secondary: hsl(25, 9.8%, 10%);
+  --secondary-foreground: hsl(35, 15%, 98%);
+  --accent: hsl(25, 9.8%, 10%);
+  --accent-foreground: hsl(35, 15%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(35, 15%, 98%);
+  --ring: hsl(25, 68%, 54%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background: var(--peace-cream);
+    color: var(--foreground);
+  }
+}
+
+@layer utilities {
+  .peace-gradient {
+    background: linear-gradient(135deg, var(--peace-brown) 0%, var(--peace-orange) 100%);
+  }
+  
+  .peace-card-shadow {
+    box-shadow: 0 4px 20px rgba(139, 69, 19, 0.1);
+  }
+  
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+}
